@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>button{
+    background-color: yellow;
+    }   
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class='color' id='cat_button' value='cat_button'><h1>寶逼產生器</h1></button>
+    <div id="catimage"><img src='' alt=''></div>
+    <script>
+        const catbut=document.getElementById("cat_button")
+        const catima=document.getElementById("catimage")
+        const images=[]
+            for(let i=1;i<=70;i++){
+                images.push(`bapic/mypic (${i}).jpg`)
+            } 
+        function getcat(){
+            const barandom = Math.floor(Math.random() * images.length)
+            catima.innerHTML = `<img src="${images[barandom]}" alt='寶照' >` 
+        }
+
+        catbut.onclick = () => getcat()
+    </script>
+</body>
+    
+</html>
+
+
+
